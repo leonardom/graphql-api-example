@@ -8,7 +8,6 @@ const typeDefs = gql`
   }
 
   type Style {
-    id: Int!
     name: String!
     beers: [Beer]
   }
@@ -21,7 +20,7 @@ const typeDefs = gql`
 
   type Query {
     breweries(id: String): [Brewery!]!
-    styles(id: Int): [Style!]!
+    styles(name: String): [Style!]!
     greeting: String!
   }
 
@@ -29,7 +28,7 @@ const typeDefs = gql`
     id: String!
     name: String!
     breweryId: String!
-    styleId: Int!
+    style: String!
     price: Float!
   }
 
